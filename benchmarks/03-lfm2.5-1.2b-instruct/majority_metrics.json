@@ -1,0 +1,774 @@
+{
+  "phase": "majority",
+  "config_name": null,
+  "base_model": null,
+  "kind": null,
+  "system_prompt_sha256": "42178ec0f3c5a21e2302ada2e6c1b5c26f409079a98e0e2c553f02f29bdc4623",
+  "config_sha256": null,
+  "dataset": {
+    "sha256": "10ea1e8c87ca2b3d7c436874a7b6a5c9fc28e01113d60d47bda00bfe510609a9",
+    "rows": 286,
+    "path": "runs/majority/test.jsonl"
+  },
+  "decoding": {
+    "split": "test",
+    "max_user_tokens": 1536,
+    "max_new_tokens": 256,
+    "do_sample": false,
+    "max_seq_length": 2048,
+    "chat_template_kwargs": {}
+  },
+  "mode": "majority",
+  "checkpoint": "majority",
+  "adapter": null,
+  "backend": "majority",
+  "majority_labels": {
+    "ac": "neut",
+    "air_panas": "neut",
+    "bau": "neut",
+    "general": "neut",
+    "kebersihan": "neut",
+    "linen": "neut",
+    "service": "neut",
+    "sunrise_meal": "neut",
+    "tv": "neut",
+    "wifi": "neut"
+  },
+  "examples": 286,
+  "aspects": [
+    "ac",
+    "air_panas",
+    "bau",
+    "general",
+    "kebersihan",
+    "linen",
+    "service",
+    "sunrise_meal",
+    "tv",
+    "wifi"
+  ],
+  "labels": [
+    "neg",
+    "neut",
+    "pos",
+    "neg_pos"
+  ],
+  "invalid_predictions": 0,
+  "syntax_valid": 286,
+  "schema_valid": 286,
+  "output_valid": 286,
+  "syntax_valid_rate": 1.0,
+  "schema_valid_rate": 1.0,
+  "output_valid_rate": 1.0,
+  "whole_review_exact": 0,
+  "whole_review_exact_accuracy": 0.0,
+  "overall_aspect_correct": 2298,
+  "overall_aspect_total": 2860,
+  "overall_aspect_accuracy": 0.8034965034965035,
+  "mean_aspect_macro_f1": 0.22166922806520942,
+  "per_aspect": {
+    "ac": {
+      "support": 286,
+      "correct": 233,
+      "accuracy": 0.8146853146853147,
+      "macro_f1": 0.22447013487475914,
+      "per_class": {
+        "neg": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 45
+        },
+        "neut": {
+          "precision": 0.8146853146853147,
+          "recall": 1.0,
+          "f1": 0.8978805394990366,
+          "support": 233
+        },
+        "pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 8
+        },
+        "neg_pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "confusion": {
+        "neg": {
+          "neg": 0,
+          "neut": 45,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neut": {
+          "neg": 0,
+          "neut": 233,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "pos": {
+          "neg": 0,
+          "neut": 8,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neg_pos": {
+          "neg": 0,
+          "neut": 0,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        }
+      },
+      "predicted_counts": {
+        "neg": 0,
+        "neut": 286,
+        "pos": 0,
+        "neg_pos": 0,
+        "INVALID": 0
+      }
+    },
+    "air_panas": {
+      "support": 286,
+      "correct": 245,
+      "accuracy": 0.8566433566433567,
+      "macro_f1": 0.23069679849340866,
+      "per_class": {
+        "neg": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 38
+        },
+        "neut": {
+          "precision": 0.8566433566433567,
+          "recall": 1.0,
+          "f1": 0.9227871939736346,
+          "support": 245
+        },
+        "pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        "neg_pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "confusion": {
+        "neg": {
+          "neg": 0,
+          "neut": 38,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neut": {
+          "neg": 0,
+          "neut": 245,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "pos": {
+          "neg": 0,
+          "neut": 3,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neg_pos": {
+          "neg": 0,
+          "neut": 0,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        }
+      },
+      "predicted_counts": {
+        "neg": 0,
+        "neut": 286,
+        "pos": 0,
+        "neg_pos": 0,
+        "INVALID": 0
+      }
+    },
+    "bau": {
+      "support": 286,
+      "correct": 244,
+      "accuracy": 0.8531468531468531,
+      "macro_f1": 0.23018867924528302,
+      "per_class": {
+        "neg": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 41
+        },
+        "neut": {
+          "precision": 0.8531468531468531,
+          "recall": 1.0,
+          "f1": 0.9207547169811321,
+          "support": 244
+        },
+        "pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "neg_pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "confusion": {
+        "neg": {
+          "neg": 0,
+          "neut": 41,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neut": {
+          "neg": 0,
+          "neut": 244,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "pos": {
+          "neg": 0,
+          "neut": 1,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neg_pos": {
+          "neg": 0,
+          "neut": 0,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        }
+      },
+      "predicted_counts": {
+        "neg": 0,
+        "neut": 286,
+        "pos": 0,
+        "neg_pos": 0,
+        "INVALID": 0
+      }
+    },
+    "general": {
+      "support": 286,
+      "correct": 243,
+      "accuracy": 0.8496503496503497,
+      "macro_f1": 0.22967863894139887,
+      "per_class": {
+        "neg": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 5
+        },
+        "neut": {
+          "precision": 0.8496503496503497,
+          "recall": 1.0,
+          "f1": 0.9187145557655955,
+          "support": 243
+        },
+        "pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 38
+        },
+        "neg_pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "confusion": {
+        "neg": {
+          "neg": 0,
+          "neut": 5,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neut": {
+          "neg": 0,
+          "neut": 243,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "pos": {
+          "neg": 0,
+          "neut": 38,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neg_pos": {
+          "neg": 0,
+          "neut": 0,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        }
+      },
+      "predicted_counts": {
+        "neg": 0,
+        "neut": 286,
+        "pos": 0,
+        "neg_pos": 0,
+        "INVALID": 0
+      }
+    },
+    "kebersihan": {
+      "support": 286,
+      "correct": 158,
+      "accuracy": 0.5524475524475524,
+      "macro_f1": 0.17792792792792791,
+      "per_class": {
+        "neg": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 96
+        },
+        "neut": {
+          "precision": 0.5524475524475524,
+          "recall": 1.0,
+          "f1": 0.7117117117117117,
+          "support": 158
+        },
+        "pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 32
+        },
+        "neg_pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "confusion": {
+        "neg": {
+          "neg": 0,
+          "neut": 96,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neut": {
+          "neg": 0,
+          "neut": 158,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "pos": {
+          "neg": 0,
+          "neut": 32,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neg_pos": {
+          "neg": 0,
+          "neut": 0,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        }
+      },
+      "predicted_counts": {
+        "neg": 0,
+        "neut": 286,
+        "pos": 0,
+        "neg_pos": 0,
+        "INVALID": 0
+      }
+    },
+    "linen": {
+      "support": 286,
+      "correct": 197,
+      "accuracy": 0.6888111888111889,
+      "macro_f1": 0.2039337474120083,
+      "per_class": {
+        "neg": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 80
+        },
+        "neut": {
+          "precision": 0.6888111888111889,
+          "recall": 1.0,
+          "f1": 0.8157349896480331,
+          "support": 197
+        },
+        "pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 9
+        },
+        "neg_pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "confusion": {
+        "neg": {
+          "neg": 0,
+          "neut": 80,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neut": {
+          "neg": 0,
+          "neut": 197,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "pos": {
+          "neg": 0,
+          "neut": 9,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neg_pos": {
+          "neg": 0,
+          "neut": 0,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        }
+      },
+      "predicted_counts": {
+        "neg": 0,
+        "neut": 286,
+        "pos": 0,
+        "neg_pos": 0,
+        "INVALID": 0
+      }
+    },
+    "service": {
+      "support": 286,
+      "correct": 207,
+      "accuracy": 0.7237762237762237,
+      "macro_f1": 0.2099391480730223,
+      "per_class": {
+        "neg": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 43
+        },
+        "neut": {
+          "precision": 0.7237762237762237,
+          "recall": 1.0,
+          "f1": 0.8397565922920892,
+          "support": 207
+        },
+        "pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 36
+        },
+        "neg_pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "confusion": {
+        "neg": {
+          "neg": 0,
+          "neut": 43,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neut": {
+          "neg": 0,
+          "neut": 207,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "pos": {
+          "neg": 0,
+          "neut": 36,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neg_pos": {
+          "neg": 0,
+          "neut": 0,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        }
+      },
+      "predicted_counts": {
+        "neg": 0,
+        "neut": 286,
+        "pos": 0,
+        "neg_pos": 0,
+        "INVALID": 0
+      }
+    },
+    "sunrise_meal": {
+      "support": 286,
+      "correct": 264,
+      "accuracy": 0.9230769230769231,
+      "macro_f1": 0.24,
+      "per_class": {
+        "neg": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 14
+        },
+        "neut": {
+          "precision": 0.9230769230769231,
+          "recall": 1.0,
+          "f1": 0.96,
+          "support": 264
+        },
+        "pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 8
+        },
+        "neg_pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "confusion": {
+        "neg": {
+          "neg": 0,
+          "neut": 14,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neut": {
+          "neg": 0,
+          "neut": 264,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "pos": {
+          "neg": 0,
+          "neut": 8,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neg_pos": {
+          "neg": 0,
+          "neut": 0,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        }
+      },
+      "predicted_counts": {
+        "neg": 0,
+        "neut": 286,
+        "pos": 0,
+        "neg_pos": 0,
+        "INVALID": 0
+      }
+    },
+    "tv": {
+      "support": 286,
+      "correct": 257,
+      "accuracy": 0.8986013986013986,
+      "macro_f1": 0.23664825046040516,
+      "per_class": {
+        "neg": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 26
+        },
+        "neut": {
+          "precision": 0.8986013986013986,
+          "recall": 1.0,
+          "f1": 0.9465930018416207,
+          "support": 257
+        },
+        "pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        "neg_pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "confusion": {
+        "neg": {
+          "neg": 0,
+          "neut": 26,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neut": {
+          "neg": 0,
+          "neut": 257,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "pos": {
+          "neg": 0,
+          "neut": 3,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neg_pos": {
+          "neg": 0,
+          "neut": 0,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        }
+      },
+      "predicted_counts": {
+        "neg": 0,
+        "neut": 286,
+        "pos": 0,
+        "neg_pos": 0,
+        "INVALID": 0
+      }
+    },
+    "wifi": {
+      "support": 286,
+      "correct": 250,
+      "accuracy": 0.8741258741258742,
+      "macro_f1": 0.2332089552238806,
+      "per_class": {
+        "neg": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 35
+        },
+        "neut": {
+          "precision": 0.8741258741258742,
+          "recall": 1.0,
+          "f1": 0.9328358208955224,
+          "support": 250
+        },
+        "pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "neg_pos": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "confusion": {
+        "neg": {
+          "neg": 0,
+          "neut": 35,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neut": {
+          "neg": 0,
+          "neut": 250,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "pos": {
+          "neg": 0,
+          "neut": 1,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        },
+        "neg_pos": {
+          "neg": 0,
+          "neut": 0,
+          "pos": 0,
+          "neg_pos": 0,
+          "INVALID": 0
+        }
+      },
+      "predicted_counts": {
+        "neg": 0,
+        "neut": 286,
+        "pos": 0,
+        "neg_pos": 0,
+        "INVALID": 0
+      }
+    }
+  },
+  "resource": {
+    "measured": false,
+    "peak_allocated_vram_gib": 0.0,
+    "peak_reserved_vram_gib": 0.0,
+    "mean_latency_ms": 0.0,
+    "median_latency_ms": 0.0,
+    "reviews_per_second": 0.0,
+    "output_tokens_per_second": 0.0,
+    "output_tokens_per_second_includes_prefill": false,
+    "total_generated_tokens": 0,
+    "mean_input_tokens": 0.0,
+    "median_input_tokens": 0.0
+  }
+}

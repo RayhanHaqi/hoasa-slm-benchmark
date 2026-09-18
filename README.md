@@ -9,19 +9,19 @@ LoRA fine-tune and the majority baseline.
 
 This repository is a self-contained local project: the commands below produce
 artifacts locally, and local `runs/`, adapters, checkpoints, and weights remain
-git-ignored. One benchmark is published here under
-[`benchmarks/01-qwen3-1.7b/`](benchmarks/01-qwen3-1.7b/) — a real GPU run of
-the Qwen3-1.7B base model and its LoRA fine-tune, plus the majority floor.
+git-ignored. Four completed GPU benchmarks are published here under
+[`benchmarks/`](benchmarks/) — each one holds a base model, its LoRA fine-tune,
+and the shared majority floor.
 
-## Published benchmark
+## Published benchmarks
 
-`benchmarks/01-qwen3-1.7b/` holds the complete lightweight artifact set of one
-completed run: `Qwen/Qwen3-1.7B` @
-`70d244cc86ccca08cf5af4e1e306ecf908b1ad5e`, full BF16 with no quantization,
-LoRA `r=16`/`alpha=32`, 3 epochs, final-epoch-3 adapter, evaluated on the 286
-labeled HoASA test rows on an `NVIDIA GeForce RTX 5060 Ti` (CUDA 12.8). Mean
-latency is `model.generate` time per review and includes prefill. The labeled
-test split is a property of the pinned commit; the
+`benchmarks/` holds the complete lightweight artifact set of the four completed
+runs. All were evaluated on the same frozen 286-row labeled HoASA test split on
+an `NVIDIA GeForce RTX 5060 Ti` (CUDA 12.8), full BF16 with no quantization,
+LoRA `r=16`/`alpha=32`, 3 epochs, final-epoch-3 adapter. Exact model and
+requested revisions are recorded in each directory's `resolved_config.yaml` and
+`run_manifest.json`. Mean latency is `model.generate` time per review and
+includes prefill. The labeled test split is a property of the pinned commit; the
 [Dataset](#dataset-pinned-unmodified) note applies, and no leaderboard
 equivalence is claimed.
 
@@ -30,17 +30,60 @@ equivalence is claimed.
 | [Majority baseline](benchmarks/01-qwen3-1.7b/majority_metrics.json) | 0.221669 | 0.803497 | 0.000000 | 1.000000 | — | — | — |
 | [Qwen3-1.7B base](benchmarks/01-qwen3-1.7b/baseline_metrics.json) | 0.342083 | 0.578671 | 0.017483 | 1.000000 | 3.307 | 972.273 | 0.000000 |
 | [Qwen3-1.7B + LoRA](benchmarks/01-qwen3-1.7b/finetuned_metrics.json) | 0.689441 | 0.973427 | 0.779720 | 1.000000 | 3.397 | 1739.857 | +0.347358 |
+| [Qwen3.5-0.8B base](benchmarks/02-qwen3.5-0.8b/baseline_metrics.json) | 0.252686 | 0.315385 | 0.000000 | 0.986014 | 1.660 | 1158.471 | 0.000000 |
+| [Qwen3.5-0.8B + LoRA](benchmarks/02-qwen3.5-0.8b/finetuned_metrics.json) | 0.692106 | 0.975524 | 0.793706 | 1.000000 | 1.701 | 6036.983 | +0.439421 |
+| [LFM2.5-1.2B-Instruct base](benchmarks/03-lfm2.5-1.2b-instruct/baseline_metrics.json) | 0.056927 | 0.031469 | 0.000000 | 0.052448 | 2.239 | 1003.184 | 0.000000 |
+| [LFM2.5-1.2B-Instruct + LoRA](benchmarks/03-lfm2.5-1.2b-instruct/finetuned_metrics.json) | 0.664728 | 0.964336 | 0.730769 | 1.000000 | 2.311 | 692.037 | +0.607801 |
+| [Qwen3.5-2B base](benchmarks/04-qwen3.5-2b/baseline_metrics.json) | 0.475039 | 0.789860 | 0.125874 | 0.986014 | 4.197 | 1435.629 | 0.000000 |
+| [Qwen3.5-2B + LoRA](benchmarks/04-qwen3.5-2b/finetuned_metrics.json) | 0.676261 | 0.937413 | 0.734266 | 0.965035 | 4.259 | 6408.723 | +0.201222 |
 
-Artifacts: [report.md](benchmarks/01-qwen3-1.7b/report.md),
-[comparison.csv](benchmarks/01-qwen3-1.7b/comparison.csv),
-[predictions (base)](benchmarks/01-qwen3-1.7b/baseline_predictions.jsonl),
-[predictions (fine-tuned)](benchmarks/01-qwen3-1.7b/finetuned_predictions.jsonl),
-[train_metrics.json](benchmarks/01-qwen3-1.7b/train_metrics.json),
-[resolved_config.yaml](benchmarks/01-qwen3-1.7b/resolved_config.yaml),
-[run_manifest.json](benchmarks/01-qwen3-1.7b/run_manifest.json),
-[environment.json](benchmarks/01-qwen3-1.7b/environment.json),
-[dataset_stats.json](benchmarks/01-qwen3-1.7b/dataset_stats.json),
-[majority_metrics.json](benchmarks/01-qwen3-1.7b/majority_metrics.json).
+Per-config artifacts (each directory also contains its own
+`majority_metrics.json`):
+
+- `01-qwen3-1.7b`: [dir](benchmarks/01-qwen3-1.7b/) ·
+  [report](benchmarks/01-qwen3-1.7b/report.md) ·
+  [comparison](benchmarks/01-qwen3-1.7b/comparison.csv) ·
+  [base predictions](benchmarks/01-qwen3-1.7b/baseline_predictions.jsonl) ·
+  [fine-tuned predictions](benchmarks/01-qwen3-1.7b/finetuned_predictions.jsonl) ·
+  [train metrics](benchmarks/01-qwen3-1.7b/train_metrics.json) ·
+  [config](benchmarks/01-qwen3-1.7b/resolved_config.yaml) ·
+  [manifest](benchmarks/01-qwen3-1.7b/run_manifest.json) ·
+  [environment](benchmarks/01-qwen3-1.7b/environment.json) ·
+  [dataset stats](benchmarks/01-qwen3-1.7b/dataset_stats.json) ·
+  [majority](benchmarks/01-qwen3-1.7b/majority_metrics.json)
+- `02-qwen3.5-0.8b`: [dir](benchmarks/02-qwen3.5-0.8b/) ·
+  [report](benchmarks/02-qwen3.5-0.8b/report.md) ·
+  [comparison](benchmarks/02-qwen3.5-0.8b/comparison.csv) ·
+  [base predictions](benchmarks/02-qwen3.5-0.8b/baseline_predictions.jsonl) ·
+  [fine-tuned predictions](benchmarks/02-qwen3.5-0.8b/finetuned_predictions.jsonl) ·
+  [train metrics](benchmarks/02-qwen3.5-0.8b/train_metrics.json) ·
+  [config](benchmarks/02-qwen3.5-0.8b/resolved_config.yaml) ·
+  [manifest](benchmarks/02-qwen3.5-0.8b/run_manifest.json) ·
+  [environment](benchmarks/02-qwen3.5-0.8b/environment.json) ·
+  [dataset stats](benchmarks/02-qwen3.5-0.8b/dataset_stats.json) ·
+  [majority](benchmarks/02-qwen3.5-0.8b/majority_metrics.json)
+- `03-lfm2.5-1.2b-instruct`: [dir](benchmarks/03-lfm2.5-1.2b-instruct/) ·
+  [report](benchmarks/03-lfm2.5-1.2b-instruct/report.md) ·
+  [comparison](benchmarks/03-lfm2.5-1.2b-instruct/comparison.csv) ·
+  [base predictions](benchmarks/03-lfm2.5-1.2b-instruct/baseline_predictions.jsonl) ·
+  [fine-tuned predictions](benchmarks/03-lfm2.5-1.2b-instruct/finetuned_predictions.jsonl) ·
+  [train metrics](benchmarks/03-lfm2.5-1.2b-instruct/train_metrics.json) ·
+  [config](benchmarks/03-lfm2.5-1.2b-instruct/resolved_config.yaml) ·
+  [manifest](benchmarks/03-lfm2.5-1.2b-instruct/run_manifest.json) ·
+  [environment](benchmarks/03-lfm2.5-1.2b-instruct/environment.json) ·
+  [dataset stats](benchmarks/03-lfm2.5-1.2b-instruct/dataset_stats.json) ·
+  [majority](benchmarks/03-lfm2.5-1.2b-instruct/majority_metrics.json)
+- `04-qwen3.5-2b`: [dir](benchmarks/04-qwen3.5-2b/) ·
+  [report](benchmarks/04-qwen3.5-2b/report.md) ·
+  [comparison](benchmarks/04-qwen3.5-2b/comparison.csv) ·
+  [base predictions](benchmarks/04-qwen3.5-2b/baseline_predictions.jsonl) ·
+  [fine-tuned predictions](benchmarks/04-qwen3.5-2b/finetuned_predictions.jsonl) ·
+  [train metrics](benchmarks/04-qwen3.5-2b/train_metrics.json) ·
+  [config](benchmarks/04-qwen3.5-2b/resolved_config.yaml) ·
+  [manifest](benchmarks/04-qwen3.5-2b/run_manifest.json) ·
+  [environment](benchmarks/04-qwen3.5-2b/environment.json) ·
+  [dataset stats](benchmarks/04-qwen3.5-2b/dataset_stats.json) ·
+  [majority](benchmarks/04-qwen3.5-2b/majority_metrics.json)
 
 ## Reference
 
@@ -239,8 +282,8 @@ There is no automatic four-model runner — run each configuration explicitly.
   provenance, the BF16/CUDA placement gate (adapter trainables exempt from the
   dtype check only, never from placement), and the comparison gates
   (mode/provenance/CUDA/library parity, with injected deterministic metadata).
-- The GPU path (`baseline`, `train`, `evaluate`, `compare`) completed for the
-  `01-qwen3-1.7b.yaml` configuration on the RTX 5060 Ti host; its artifacts are
-  the [published benchmark](#published-benchmark) linked above. The other three
-  configs are not published and are outside this reported benchmark — no zero
-  rows, placeholder scores, or run-status claims are made for them here.
+- The GPU path (`baseline`, `train`, `evaluate`, `compare`) completed for all
+  four configs (`01-qwen3-1.7b.yaml`, `02-qwen3.5-0.8b.yaml`,
+  `03-lfm2.5-1.2b-instruct.yaml`, `04-qwen3.5-2b.yaml`) on the RTX 5060 Ti host;
+  their artifacts are the four [published benchmarks](#published-benchmarks)
+  linked above.

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-17T17:29:22.789902+00:00",
+  "created_by": "baseline",
+  "package": {
+    "name": "hoasa-slm-benchmark",
+    "version": "0.1.0"
+  },
+  "config_path": "/home/tilakoid/hoasa-slm-benchmark/configs/04-qwen3.5-2b.yaml",
+  "config_name": "04-qwen3.5-2b",
+  "config_sha256": "82ed21200f744a0789611575eb1942cf1e9cf573df6746be1f11dd2a39184c85",
+  "system_prompt_sha256": "42178ec0f3c5a21e2302ada2e6c1b5c26f409079a98e0e2c553f02f29bdc4623",
+  "model": {
+    "base_model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "kind": "vision",
+    "trust_remote_code": false,
+    "load_in_4bit": false,
+    "bf16": true,
+    "fp16": false,
+    "max_seq_length": 2048,
+    "max_user_tokens": 1536,
+    "max_new_tokens": 256,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "target_modules": "all-linear",
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.0,
+    "lora_bias": "none",
+    "finetune_vision_layers": false,
+    "finetune_language_layers": true,
+    "finetune_attention_modules": true,
+    "finetune_mlp_modules": true
+  },
+  "dataset": {
+    "train": {
+      "sha256": "bd49260ae800ec8a6712caccf4592b4418aea6565a83d3f56c9cdc86b8c332aa",
+      "rows": 2283
+    },
+    "val": {
+      "sha256": "6c95e7588f0de899199ae2300afd3e2a3fd320887f6cbe63a864d0981cbb587f",
+      "rows": 285
+    },
+    "test": {
+      "sha256": "10ea1e8c87ca2b3d7c436874a7b6a5c9fc28e01113d60d47bda00bfe510609a9",
+      "rows": 286
+    }
+  },
+  "dataset_stats_sha256": "245b49e2e8b51acacf3742773db3114c45c15203b864423ba80afa0823b79071",
+  "environment_sha256": "67a9f4fbafe8fe5f5a2c62a011f93690ec89b18969e58a520d75f18ae72dd068"
+}
