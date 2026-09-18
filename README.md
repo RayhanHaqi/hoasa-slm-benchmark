@@ -201,3 +201,9 @@ pyproject.toml         editable install and the hoasa entry point
 ## Related benchmark
 
 [GitHub Issue Triage](https://github.com/RayhanHaqi/github-triage-slm-benchmark) applies the same small-model approach to binary issue classification.
+
+## License
+
+Code in this repository is licensed under the Apache License 2.0.
+
+Third-party models and datasets remain subject to their respective licenses and terms.
