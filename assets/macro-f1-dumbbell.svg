@@ -1,20 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="860" height="290" viewBox="0 0 860 290" role="img" aria-labelledby="macro-f1-title" aria-describedby="macro-f1-desc">
 <title id="macro-f1-title">Mean aspect macro-F1: base checkpoint vs LoRA fine-tune, HoASA</title>
 <desc id="macro-f1-desc">Dumbbell chart of mean aspect macro-F1 for four HoASA configurations on the frozen 286-row test split, base checkpoint versus LoRA fine-tune, ordered by gain. Open circles are base checkpoints, filled circles are fine-tuned adapters, and the signed value at right is adapter minus base in percentage points. LFM2.5-1.2B-Instruct: 0.0569 to 0.6647 (+60.8 pp); Qwen3.5-0.8B: 0.2527 to 0.6921 (+43.9 pp); Qwen3-1.7B: 0.3421 to 0.6894 (+34.7 pp); Qwen3.5-2B: 0.4750 to 0.6763 (+20.1 pp). A dashed vertical line marks the shared majority baseline at 0.2217.</desc>
-<style>
-  @media (prefers-color-scheme: dark) {
-    .card { fill: #0d1117; stroke: #30363d; }
-    .ink { fill: #e6edf3; }
-    .muted { fill: #8b949e; }
-    .grid { stroke: #21262d; }
-    .axis { stroke: #484f58; }
-    .bar { stroke: #484f58; }
-    .hollow { fill: #0d1117; stroke: #8b949e; }
-    .dot { fill: #4493f8; }
-    .maj { stroke: #d29922; }
-    .maj-label { fill: #d29922; }
-  }
-</style>
 <rect class="card" x="0.5" y="0.5" width="859" height="289" rx="8" fill="#ffffff" stroke="#d0d7de"/>
 <text class="ink" x="16" y="27" font-size="14" font-weight="700" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">Mean aspect macro-F1 &#8212; base versus LoRA</text>
 <circle class="hollow" cx="628" cy="23" r="4" fill="#ffffff" stroke="#6e7781" stroke-width="1.5"/>
