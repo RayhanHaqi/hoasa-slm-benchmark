@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-09-17T17:13:02.384157+00:00",
+  "package": {
+    "name": "hoasa-slm-benchmark",
+    "version": "0.1.0"
+  },
+  "python": "3.11.16",
+  "executable": "/home/tilakoid/miniconda3/envs/github-triage/bin/python",
+  "platform": "Linux-7.0.0-30-generic-x86_64-with-glibc2.39",
+  "cpu_count": 12,
+  "cwd": "/home/tilakoid/hoasa-slm-benchmark",
+  "packages": {
+    "python": "3.11.16",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.5.0",
+    "peft": "0.20.0",
+    "datasets": "4.3.0",
+    "trl": "0.24.0",
+    "unsloth": "2026.9.4",
+    "unsloth_zoo": "2026.9.3",
+    "accelerate": "1.15.0",
+    "bitsandbytes": "0.50.2",
+    "PyYAML": "6.0.3",
+    "tqdm": "4.70.1"
+  },
+  "cuda": {
+    "probed": true,
+    "available": true,
+    "cuda_version": "12.8",
+    "torch_version": "2.11.0+cu128",
+    "device_count": 1,
+    "devices": [
+      "NVIDIA GeForce RTX 5060 Ti"
+    ]
+  }
+}

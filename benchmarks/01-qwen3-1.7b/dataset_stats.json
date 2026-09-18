@@ -1,0 +1,289 @@
+{
+  "source": {
+    "name": "hoasa_absa-airy",
+    "repo": "IndoNLP/indonlu",
+    "commit": "ce728f6926a36174b9923dfe49d6a6839b6e9bb7",
+    "urls": {
+      "train": "https://raw.githubusercontent.com/IndoNLP/indonlu/ce728f6926a36174b9923dfe49d6a6839b6e9bb7/dataset/hoasa_absa-airy/train_preprocess.csv",
+      "val": "https://raw.githubusercontent.com/IndoNLP/indonlu/ce728f6926a36174b9923dfe49d6a6839b6e9bb7/dataset/hoasa_absa-airy/valid_preprocess.csv",
+      "test": "https://raw.githubusercontent.com/IndoNLP/indonlu/ce728f6926a36174b9923dfe49d6a6839b6e9bb7/dataset/hoasa_absa-airy/test_preprocess.csv"
+    }
+  },
+  "raw": {
+    "train": {
+      "path": "raw/train_preprocess.csv",
+      "sha256": "752935b62235f1a719c5e526e4ac68b3ba452f84a2a6f911ef20cb855b23546d",
+      "rows": 2283
+    },
+    "val": {
+      "path": "raw/valid_preprocess.csv",
+      "sha256": "7109001762f0bd83526d3de224c0ba5302bfb781eee6c1334aac8039a188f4fa",
+      "rows": 285
+    },
+    "test": {
+      "path": "raw/test_preprocess.csv",
+      "sha256": "ce2c7c3f30359e08d4637eb65a05b5a685b888165d40b3133c48c99e1102b094",
+      "rows": 286
+    }
+  },
+  "prepared": {
+    "train": {
+      "path": "prepared/train.jsonl",
+      "sha256": "bd49260ae800ec8a6712caccf4592b4418aea6565a83d3f56c9cdc86b8c332aa",
+      "rows": 2283
+    },
+    "val": {
+      "path": "prepared/val.jsonl",
+      "sha256": "6c95e7588f0de899199ae2300afd3e2a3fd320887f6cbe63a864d0981cbb587f",
+      "rows": 285
+    },
+    "test": {
+      "path": "prepared/test.jsonl",
+      "sha256": "10ea1e8c87ca2b3d7c436874a7b6a5c9fc28e01113d60d47bda00bfe510609a9",
+      "rows": 286
+    }
+  },
+  "aspects": [
+    "ac",
+    "air_panas",
+    "bau",
+    "general",
+    "kebersihan",
+    "linen",
+    "service",
+    "sunrise_meal",
+    "tv",
+    "wifi"
+  ],
+  "labels": [
+    "neg",
+    "neut",
+    "pos",
+    "neg_pos"
+  ],
+  "per_aspect": {
+    "train": {
+      "ac": {
+        "neg": 417,
+        "neut": 1814,
+        "pos": 51,
+        "neg_pos": 1
+      },
+      "air_panas": {
+        "neg": 335,
+        "neut": 1922,
+        "pos": 26,
+        "neg_pos": 0
+      },
+      "bau": {
+        "neg": 360,
+        "neut": 1911,
+        "pos": 12,
+        "neg_pos": 0
+      },
+      "general": {
+        "neg": 30,
+        "neut": 2023,
+        "pos": 230,
+        "neg_pos": 0
+      },
+      "kebersihan": {
+        "neg": 722,
+        "neut": 1350,
+        "pos": 205,
+        "neg_pos": 6
+      },
+      "linen": {
+        "neg": 606,
+        "neut": 1613,
+        "pos": 63,
+        "neg_pos": 1
+      },
+      "service": {
+        "neg": 386,
+        "neut": 1649,
+        "pos": 247,
+        "neg_pos": 1
+      },
+      "sunrise_meal": {
+        "neg": 100,
+        "neut": 2108,
+        "pos": 75,
+        "neg_pos": 0
+      },
+      "tv": {
+        "neg": 195,
+        "neut": 2075,
+        "pos": 13,
+        "neg_pos": 0
+      },
+      "wifi": {
+        "neg": 330,
+        "neut": 1928,
+        "pos": 25,
+        "neg_pos": 0
+      }
+    },
+    "val": {
+      "ac": {
+        "neg": 52,
+        "neut": 226,
+        "pos": 7,
+        "neg_pos": 0
+      },
+      "air_panas": {
+        "neg": 48,
+        "neut": 230,
+        "pos": 7,
+        "neg_pos": 0
+      },
+      "bau": {
+        "neg": 37,
+        "neut": 247,
+        "pos": 1,
+        "neg_pos": 0
+      },
+      "general": {
+        "neg": 2,
+        "neut": 253,
+        "pos": 30,
+        "neg_pos": 0
+      },
+      "kebersihan": {
+        "neg": 104,
+        "neut": 157,
+        "pos": 24,
+        "neg_pos": 0
+      },
+      "linen": {
+        "neg": 82,
+        "neut": 190,
+        "pos": 13,
+        "neg_pos": 0
+      },
+      "service": {
+        "neg": 42,
+        "neut": 211,
+        "pos": 32,
+        "neg_pos": 0
+      },
+      "sunrise_meal": {
+        "neg": 15,
+        "neut": 261,
+        "pos": 9,
+        "neg_pos": 0
+      },
+      "tv": {
+        "neg": 28,
+        "neut": 254,
+        "pos": 3,
+        "neg_pos": 0
+      },
+      "wifi": {
+        "neg": 39,
+        "neut": 244,
+        "pos": 2,
+        "neg_pos": 0
+      }
+    },
+    "test": {
+      "ac": {
+        "neg": 45,
+        "neut": 233,
+        "pos": 8,
+        "neg_pos": 0
+      },
+      "air_panas": {
+        "neg": 38,
+        "neut": 245,
+        "pos": 3,
+        "neg_pos": 0
+      },
+      "bau": {
+        "neg": 41,
+        "neut": 244,
+        "pos": 1,
+        "neg_pos": 0
+      },
+      "general": {
+        "neg": 5,
+        "neut": 243,
+        "pos": 38,
+        "neg_pos": 0
+      },
+      "kebersihan": {
+        "neg": 96,
+        "neut": 158,
+        "pos": 32,
+        "neg_pos": 0
+      },
+      "linen": {
+        "neg": 80,
+        "neut": 197,
+        "pos": 9,
+        "neg_pos": 0
+      },
+      "service": {
+        "neg": 43,
+        "neut": 207,
+        "pos": 36,
+        "neg_pos": 0
+      },
+      "sunrise_meal": {
+        "neg": 14,
+        "neut": 264,
+        "pos": 8,
+        "neg_pos": 0
+      },
+      "tv": {
+        "neg": 26,
+        "neut": 257,
+        "pos": 3,
+        "neg_pos": 0
+      },
+      "wifi": {
+        "neg": 35,
+        "neut": 250,
+        "pos": 1,
+        "neg_pos": 0
+      }
+    }
+  },
+  "findings": {
+    "duplicate_reviews": {
+      "per_split": {
+        "train": {
+          "duplicate_groups": 0,
+          "extra_rows": 0
+        },
+        "val": {
+          "duplicate_groups": 0,
+          "extra_rows": 0
+        },
+        "test": {
+          "duplicate_groups": 0,
+          "extra_rows": 0
+        }
+      },
+      "cross_split": 0,
+      "examples": []
+    },
+    "empty": {
+      "reviews": 0,
+      "cells": {
+        "ac": 0,
+        "air_panas": 0,
+        "bau": 0,
+        "general": 0,
+        "kebersihan": 0,
+        "linen": 0,
+        "service": 0,
+        "sunrise_meal": 0,
+        "tv": 0,
+        "wifi": 0
+      },
+      "missing_values": 0
+    }
+  },
+  "notes": "report only: no cleaning, deduplication, re-splitting, balancing or augmentation; official splits and exact reviews/labels preserved"
+}

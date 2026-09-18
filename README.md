@@ -7,9 +7,40 @@ sentiment analysis (ABSA) on the IndoNLU **HoASA** dataset
 parser and one shared metric implementation for the base-model baseline, the
 LoRA fine-tune and the majority baseline.
 
-This repository is a self-contained local project. It contains no results:
-the commands below produce all artifacts locally, and the GPU baseline/training
-path has **not** been executed in this repository.
+This repository is a self-contained local project: the commands below produce
+artifacts locally, and local `runs/`, adapters, checkpoints, and weights remain
+git-ignored. One benchmark is published here under
+[`benchmarks/01-qwen3-1.7b/`](benchmarks/01-qwen3-1.7b/) — a real GPU run of
+the Qwen3-1.7B base model and its LoRA fine-tune, plus the majority floor.
+
+## Published benchmark
+
+`benchmarks/01-qwen3-1.7b/` holds the complete lightweight artifact set of one
+completed run: `Qwen/Qwen3-1.7B` @
+`70d244cc86ccca08cf5af4e1e306ecf908b1ad5e`, full BF16 with no quantization,
+LoRA `r=16`/`alpha=32`, 3 epochs, final-epoch-3 adapter, evaluated on the 286
+labeled HoASA test rows on an `NVIDIA GeForce RTX 5060 Ti` (CUDA 12.8). Mean
+latency is `model.generate` time per review and includes prefill. The labeled
+test split is a property of the pinned commit; the
+[Dataset](#dataset-pinned-unmodified) note applies, and no leaderboard
+equivalence is claimed.
+
+| Model | Mean aspect macro-F1 | Overall aspect accuracy | Whole-review exact accuracy | Schema-valid rate | Peak allocated VRAM (GiB) | Mean latency (ms/review) | Δ macro-F1 vs base |
+|---|---|---|---|---|---|---|---|
+| [Majority baseline](benchmarks/01-qwen3-1.7b/majority_metrics.json) | 0.221669 | 0.803497 | 0.000000 | 1.000000 | — | — | — |
+| [Qwen3-1.7B base](benchmarks/01-qwen3-1.7b/baseline_metrics.json) | 0.342083 | 0.578671 | 0.017483 | 1.000000 | 3.307 | 972.273 | 0.000000 |
+| [Qwen3-1.7B + LoRA](benchmarks/01-qwen3-1.7b/finetuned_metrics.json) | 0.689441 | 0.973427 | 0.779720 | 1.000000 | 3.397 | 1739.857 | +0.347358 |
+
+Artifacts: [report.md](benchmarks/01-qwen3-1.7b/report.md),
+[comparison.csv](benchmarks/01-qwen3-1.7b/comparison.csv),
+[predictions (base)](benchmarks/01-qwen3-1.7b/baseline_predictions.jsonl),
+[predictions (fine-tuned)](benchmarks/01-qwen3-1.7b/finetuned_predictions.jsonl),
+[train_metrics.json](benchmarks/01-qwen3-1.7b/train_metrics.json),
+[resolved_config.yaml](benchmarks/01-qwen3-1.7b/resolved_config.yaml),
+[run_manifest.json](benchmarks/01-qwen3-1.7b/run_manifest.json),
+[environment.json](benchmarks/01-qwen3-1.7b/environment.json),
+[dataset_stats.json](benchmarks/01-qwen3-1.7b/dataset_stats.json),
+[majority_metrics.json](benchmarks/01-qwen3-1.7b/majority_metrics.json).
 
 ## Reference
 
@@ -199,7 +230,7 @@ There is no automatic four-model runner — run each configuration explicitly.
 
 ## Validation status
 
-- `python -m unittest discover -s tests -v` (87 tests, all passing) covers the
+- `python -m unittest discover -s tests -v` (94 tests, all passing) covers the
   parser (perfect, key order, wrong/missing/invalid values, extra keys,
   malformed, non-object, duplicates, all-invalid), metrics (zero support,
   INVALID denominator, empty input), synthetic prepare helpers, truncation with
@@ -208,5 +239,8 @@ There is no automatic four-model runner — run each configuration explicitly.
   provenance, the BF16/CUDA placement gate (adapter trainables exempt from the
   dtype check only, never from placement), and the comparison gates
   (mode/provenance/CUDA/library parity, with injected deterministic metadata).
-- The GPU path (`baseline`, `train`, `evaluate`, `compare` after real metrics)
-  has not been executed here; it is implemented but untested on hardware.
+- The GPU path (`baseline`, `train`, `evaluate`, `compare`) completed for the
+  `01-qwen3-1.7b.yaml` configuration on the RTX 5060 Ti host; its artifacts are
+  the [published benchmark](#published-benchmark) linked above. The other three
+  configs are not published and are outside this reported benchmark — no zero
+  rows, placeholder scores, or run-status claims are made for them here.

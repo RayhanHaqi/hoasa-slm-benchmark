@@ -1,0 +1,1033 @@
+{
+  "phase": "train",
+  "base_model": "Qwen/Qwen3-1.7B",
+  "kind": "language",
+  "config_name": "01-qwen3-1.7b",
+  "config_sha256": "c76df0ae10fd20caa14de379c7fb7db6bbdf16f12a833d2d794a30d29e7da57b",
+  "system_prompt_sha256": "42178ec0f3c5a21e2302ada2e6c1b5c26f409079a98e0e2c553f02f29bdc4623",
+  "dataset": {
+    "train": {
+      "sha256": "bd49260ae800ec8a6712caccf4592b4418aea6565a83d3f56c9cdc86b8c332aa",
+      "rows": 2283
+    },
+    "val": {
+      "sha256": "6c95e7588f0de899199ae2300afd3e2a3fd320887f6cbe63a864d0981cbb587f",
+      "rows": 285
+    },
+    "test": {
+      "sha256": "10ea1e8c87ca2b3d7c436874a7b6a5c9fc28e01113d60d47bda00bfe510609a9",
+      "rows": 286
+    }
+  },
+  "dataset_stats_sha256": "245b49e2e8b51acacf3742773db3114c45c15203b864423ba80afa0823b79071",
+  "requested_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "resolved_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "train_examples": 2283,
+  "val_examples": 285,
+  "adapter_dir": "runs/01-qwen3-1.7b/adapter",
+  "trainer_dir": "runs/01-qwen3-1.7b/trainer",
+  "train_metrics": {
+    "train_runtime": 1096.7339,
+    "train_samples_per_second": 6.245,
+    "train_steps_per_second": 0.782,
+    "total_flos": 3.087591839880192e+16,
+    "train_loss": 0.250765957059838,
+    "epoch": 3.0
+  },
+  "log_history": [
+    {
+      "loss": 2.292479705810547,
+      "grad_norm": 2.0683212280273438,
+      "learning_rate": 4.186046511627907e-05,
+      "epoch": 0.03502626970227671,
+      "step": 10
+    },
+    {
+      "loss": 1.6441947937011718,
+      "grad_norm": 0.9346478581428528,
+      "learning_rate": 8.837209302325582e-05,
+      "epoch": 0.07005253940455342,
+      "step": 20
+    },
+    {
+      "loss": 0.8177177429199218,
+      "grad_norm": 0.9169305562973022,
+      "learning_rate": 0.00013488372093023256,
+      "epoch": 0.10507880910683012,
+      "step": 30
+    },
+    {
+      "loss": 0.30129404067993165,
+      "grad_norm": 0.2637633979320526,
+      "learning_rate": 0.0001813953488372093,
+      "epoch": 0.14010507880910683,
+      "step": 40
+    },
+    {
+      "loss": 0.27314622402191163,
+      "grad_norm": 0.2191244661808014,
+      "learning_rate": 0.00019997325530351606,
+      "epoch": 0.17513134851138354,
+      "step": 50
+    },
+    {
+      "loss": 0.2644395112991333,
+      "grad_norm": 0.2025304138660431,
+      "learning_rate": 0.0001998098672949963,
+      "epoch": 0.21015761821366025,
+      "step": 60
+    },
+    {
+      "loss": 0.2558183193206787,
+      "grad_norm": 0.20757491886615753,
+      "learning_rate": 0.00019949819189365433,
+      "epoch": 0.24518388791593695,
+      "step": 70
+    },
+    {
+      "loss": 0.25888781547546386,
+      "grad_norm": 0.17125867307186127,
+      "learning_rate": 0.00019903869215523733,
+      "epoch": 0.28021015761821366,
+      "step": 80
+    },
+    {
+      "loss": 0.25456287860870364,
+      "grad_norm": 0.1814119964838028,
+      "learning_rate": 0.00019843205075792186,
+      "epoch": 0.31523642732049034,
+      "step": 90
+    },
+    {
+      "loss": 0.2260805606842041,
+      "grad_norm": 0.16514700651168823,
+      "learning_rate": 0.00019767916898805993,
+      "epoch": 0.3502626970227671,
+      "step": 100
+    },
+    {
+      "loss": 0.2591996669769287,
+      "grad_norm": 0.19353175163269043,
+      "learning_rate": 0.0001967811654011389,
+      "epoch": 0.38528896672504376,
+      "step": 110
+    },
+    {
+      "loss": 0.22129125595092775,
+      "grad_norm": 0.18247368931770325,
+      "learning_rate": 0.00019573937415994506,
+      "epoch": 0.4203152364273205,
+      "step": 120
+    },
+    {
+      "loss": 0.21979327201843263,
+      "grad_norm": 0.15901033580303192,
+      "learning_rate": 0.00019455534305239965,
+      "epoch": 0.4553415061295972,
+      "step": 130
+    },
+    {
+      "loss": 0.21339144706726074,
+      "grad_norm": 0.19460497796535492,
+      "learning_rate": 0.00019323083119201235,
+      "epoch": 0.4903677758318739,
+      "step": 140
+    },
+    {
+      "loss": 0.21490187644958497,
+      "grad_norm": 0.17899468541145325,
+      "learning_rate": 0.0001917678064043686,
+      "epoch": 0.5253940455341506,
+      "step": 150
+    },
+    {
+      "loss": 0.21370420455932618,
+      "grad_norm": 0.18145516514778137,
+      "learning_rate": 0.00019016844230353356,
+      "epoch": 0.5604203152364273,
+      "step": 160
+    },
+    {
+      "loss": 0.2439013957977295,
+      "grad_norm": 0.19140951335430145,
+      "learning_rate": 0.00018843511506271644,
+      "epoch": 0.5954465849387041,
+      "step": 170
+    },
+    {
+      "loss": 0.21572418212890626,
+      "grad_norm": 0.14750853180885315,
+      "learning_rate": 0.00018657039988399313,
+      "epoch": 0.6304728546409807,
+      "step": 180
+    },
+    {
+      "loss": 0.203908109664917,
+      "grad_norm": 0.15888401865959167,
+      "learning_rate": 0.00018457706717233164,
+      "epoch": 0.6654991243432574,
+      "step": 190
+    },
+    {
+      "loss": 0.19157204627990723,
+      "grad_norm": 0.1313830465078354,
+      "learning_rate": 0.0001824580784196049,
+      "epoch": 0.7005253940455342,
+      "step": 200
+    },
+    {
+      "loss": 0.25995008945465087,
+      "grad_norm": 0.1598227322101593,
+      "learning_rate": 0.0001802165818047063,
+      "epoch": 0.7355516637478109,
+      "step": 210
+    },
+    {
+      "loss": 0.23995575904846192,
+      "grad_norm": 0.19627153873443604,
+      "learning_rate": 0.00017785590751630403,
+      "epoch": 0.7705779334500875,
+      "step": 220
+    },
+    {
+      "loss": 0.19800516366958618,
+      "grad_norm": 0.14034171402454376,
+      "learning_rate": 0.00017537956280518416,
+      "epoch": 0.8056042031523643,
+      "step": 230
+    },
+    {
+      "loss": 0.20966410636901855,
+      "grad_norm": 0.17688851058483124,
+      "learning_rate": 0.00017279122677353262,
+      "epoch": 0.840630472854641,
+      "step": 240
+    },
+    {
+      "loss": 0.2478975772857666,
+      "grad_norm": 0.16656596958637238,
+      "learning_rate": 0.0001700947449088977,
+      "epoch": 0.8756567425569177,
+      "step": 250
+    },
+    {
+      "loss": 0.1727984666824341,
+      "grad_norm": 0.13961096107959747,
+      "learning_rate": 0.00016729412337095417,
+      "epoch": 0.9106830122591943,
+      "step": 260
+    },
+    {
+      "loss": 0.20112416744232178,
+      "grad_norm": 0.14167951047420502,
+      "learning_rate": 0.00016439352303955688,
+      "epoch": 0.9457092819614711,
+      "step": 270
+    },
+    {
+      "loss": 0.21703546047210692,
+      "grad_norm": 0.1398128867149353,
+      "learning_rate": 0.0001613972533329269,
+      "epoch": 0.9807355516637478,
+      "step": 280
+    },
+    {
+      "eval_loss": 0.21423038840293884,
+      "eval_runtime": 18.4153,
+      "eval_samples_per_second": 15.476,
+      "eval_steps_per_second": 15.476,
+      "epoch": 1.0,
+      "step": 286
+    },
+    {
+      "loss": 0.20330960750579835,
+      "grad_norm": 0.17575576901435852,
+      "learning_rate": 0.00015830976580515432,
+      "epoch": 1.0140105078809107,
+      "step": 290
+    },
+    {
+      "loss": 0.233841609954834,
+      "grad_norm": 0.17603638768196106,
+      "learning_rate": 0.00015513564753252994,
+      "epoch": 1.0490367775831875,
+      "step": 300
+    },
+    {
+      "loss": 0.1784202814102173,
+      "grad_norm": 0.1557978391647339,
+      "learning_rate": 0.0001518796142985321,
+      "epoch": 1.084063047285464,
+      "step": 310
+    },
+    {
+      "loss": 0.17411017417907715,
+      "grad_norm": 0.15465909242630005,
+      "learning_rate": 0.0001485465035875929,
+      "epoch": 1.1190893169877407,
+      "step": 320
+    },
+    {
+      "loss": 0.1997685194015503,
+      "grad_norm": 0.1873965710401535,
+      "learning_rate": 0.00014514126739805387,
+      "epoch": 1.1541155866900175,
+      "step": 330
+    },
+    {
+      "loss": 0.21276872158050536,
+      "grad_norm": 0.1937294453382492,
+      "learning_rate": 0.0001416689648849883,
+      "epoch": 1.1891418563922942,
+      "step": 340
+    },
+    {
+      "loss": 0.17573734521865844,
+      "grad_norm": 0.17612090706825256,
+      "learning_rate": 0.000138134754843821,
+      "epoch": 1.224168126094571,
+      "step": 350
+    },
+    {
+      "loss": 0.20272459983825683,
+      "grad_norm": 0.18465273082256317,
+      "learning_rate": 0.00013454388804591254,
+      "epoch": 1.2591943957968477,
+      "step": 360
+    },
+    {
+      "loss": 0.19658501148223878,
+      "grad_norm": 0.16273672878742218,
+      "learning_rate": 0.00013090169943749476,
+      "epoch": 1.2942206654991244,
+      "step": 370
+    },
+    {
+      "loss": 0.17040809392929077,
+      "grad_norm": 0.21299386024475098,
+      "learning_rate": 0.00012721360021354818,
+      "epoch": 1.3292469352014011,
+      "step": 380
+    },
+    {
+      "loss": 0.18769224882125854,
+      "grad_norm": 0.1901473104953766,
+      "learning_rate": 0.0001234850697783964,
+      "epoch": 1.3642732049036779,
+      "step": 390
+    },
+    {
+      "loss": 0.24202413558959962,
+      "grad_norm": 0.19927965104579926,
+      "learning_rate": 0.00011972164760496187,
+      "epoch": 1.3992994746059544,
+      "step": 400
+    },
+    {
+      "loss": 0.195517635345459,
+      "grad_norm": 0.15301702916622162,
+      "learning_rate": 0.00011592892500477843,
+      "epoch": 1.4343257443082311,
+      "step": 410
+    },
+    {
+      "loss": 0.18544243574142455,
+      "grad_norm": 0.2144862711429596,
+      "learning_rate": 0.00011211253682098652,
+      "epoch": 1.4693520140105079,
+      "step": 420
+    },
+    {
+      "loss": 0.21184108257293702,
+      "grad_norm": 0.21623638272285461,
+      "learning_rate": 0.00010827815305665412,
+      "epoch": 1.5043782837127846,
+      "step": 430
+    },
+    {
+      "loss": 0.2022012710571289,
+      "grad_norm": 0.18766747415065765,
+      "learning_rate": 0.00010443147045086017,
+      "epoch": 1.5394045534150613,
+      "step": 440
+    },
+    {
+      "loss": 0.2083381175994873,
+      "grad_norm": 0.17549650371074677,
+      "learning_rate": 0.00010057820401505691,
+      "epoch": 1.5744308231173378,
+      "step": 450
+    },
+    {
+      "loss": 0.2110511064529419,
+      "grad_norm": 0.13673503696918488,
+      "learning_rate": 9.672407854228427e-05,
+      "epoch": 1.6094570928196146,
+      "step": 460
+    },
+    {
+      "loss": 0.19129927158355714,
+      "grad_norm": 0.15509800612926483,
+      "learning_rate": 9.287482010185247e-05,
+      "epoch": 1.6444833625218913,
+      "step": 470
+    },
+    {
+      "loss": 0.1919719934463501,
+      "grad_norm": 0.2168758660554886,
+      "learning_rate": 8.903614753212778e-05,
+      "epoch": 1.679509632224168,
+      "step": 480
+    },
+    {
+      "loss": 0.2052760124206543,
+      "grad_norm": 0.23081061244010925,
+      "learning_rate": 8.52137639440621e-05,
+      "epoch": 1.7145359019264448,
+      "step": 490
+    },
+    {
+      "loss": 0.19684765338897706,
+      "grad_norm": 0.1789667159318924,
+      "learning_rate": 8.141334824808769e-05,
+      "epoch": 1.7495621716287215,
+      "step": 500
+    },
+    {
+      "loss": 0.2219294309616089,
+      "grad_norm": 0.22909587621688843,
+      "learning_rate": 7.764054671696775e-05,
+      "epoch": 1.7845884413309983,
+      "step": 510
+    },
+    {
+      "loss": 0.209938383102417,
+      "grad_norm": 0.20027126371860504,
+      "learning_rate": 7.390096459713583e-05,
+      "epoch": 1.819614711033275,
+      "step": 520
+    },
+    {
+      "loss": 0.18699556589126587,
+      "grad_norm": 0.1733102798461914,
+      "learning_rate": 7.020015778098828e-05,
+      "epoch": 1.8546409807355517,
+      "step": 530
+    },
+    {
+      "loss": 0.2089613437652588,
+      "grad_norm": 0.20998355746269226,
+      "learning_rate": 6.654362455250223e-05,
+      "epoch": 1.8896672504378285,
+      "step": 540
+    },
+    {
+      "loss": 0.24445931911468505,
+      "grad_norm": 0.18718411028385162,
+      "learning_rate": 6.293679741844205e-05,
+      "epoch": 1.9246935201401052,
+      "step": 550
+    },
+    {
+      "loss": 0.20699946880340575,
+      "grad_norm": 0.18398302793502808,
+      "learning_rate": 5.93850350372906e-05,
+      "epoch": 1.959719789842382,
+      "step": 560
+    },
+    {
+      "loss": 0.15650988817214967,
+      "grad_norm": 0.17586329579353333,
+      "learning_rate": 5.589361425789769e-05,
+      "epoch": 1.9947460595446584,
+      "step": 570
+    },
+    {
+      "eval_loss": 0.2075623720884323,
+      "eval_runtime": 18.093,
+      "eval_samples_per_second": 15.752,
+      "eval_steps_per_second": 15.752,
+      "epoch": 2.0,
+      "step": 572
+    },
+    {
+      "loss": 0.19596821069717407,
+      "grad_norm": 0.1380777657032013,
+      "learning_rate": 5.246772227967209e-05,
+      "epoch": 2.0280210157618215,
+      "step": 580
+    },
+    {
+      "loss": 0.1707539439201355,
+      "grad_norm": 0.18788544833660126,
+      "learning_rate": 4.911244894596596e-05,
+      "epoch": 2.063047285464098,
+      "step": 590
+    },
+    {
+      "loss": 0.1934627652168274,
+      "grad_norm": 0.1974041759967804,
+      "learning_rate": 4.583277918210141e-05,
+      "epoch": 2.098073555166375,
+      "step": 600
+    },
+    {
+      "loss": 0.17963523864746095,
+      "grad_norm": 0.20898979902267456,
+      "learning_rate": 4.263358558927281e-05,
+      "epoch": 2.1330998248686517,
+      "step": 610
+    },
+    {
+      "loss": 0.18807485103607177,
+      "grad_norm": 0.15106767416000366,
+      "learning_rate": 3.951962120532975e-05,
+      "epoch": 2.168126094570928,
+      "step": 620
+    },
+    {
+      "loss": 0.19211251735687257,
+      "grad_norm": 0.2137690633535385,
+      "learning_rate": 3.6495512443194644e-05,
+      "epoch": 2.2031523642732047,
+      "step": 630
+    },
+    {
+      "loss": 0.2084744930267334,
+      "grad_norm": 0.2637248933315277,
+      "learning_rate": 3.35657522174069e-05,
+      "epoch": 2.2381786339754814,
+      "step": 640
+    },
+    {
+      "loss": 0.1748465657234192,
+      "grad_norm": 0.19505099952220917,
+      "learning_rate": 3.0734693269005565e-05,
+      "epoch": 2.273204903677758,
+      "step": 650
+    },
+    {
+      "loss": 0.17306647300720215,
+      "grad_norm": 0.23693130910396576,
+      "learning_rate": 2.800654169866751e-05,
+      "epoch": 2.308231173380035,
+      "step": 660
+    },
+    {
+      "loss": 0.18591725826263428,
+      "grad_norm": 0.21779386699199677,
+      "learning_rate": 2.5385350717708857e-05,
+      "epoch": 2.3432574430823117,
+      "step": 670
+    },
+    {
+      "loss": 0.1866474747657776,
+      "grad_norm": 0.19748079776763916,
+      "learning_rate": 2.287501462623436e-05,
+      "epoch": 2.3782837127845884,
+      "step": 680
+    },
+    {
+      "loss": 0.1724494457244873,
+      "grad_norm": 0.3041726052761078,
+      "learning_rate": 2.047926302738049e-05,
+      "epoch": 2.413309982486865,
+      "step": 690
+    },
+    {
+      "loss": 0.16596173048019408,
+      "grad_norm": 0.27176299691200256,
+      "learning_rate": 1.8201655286248763e-05,
+      "epoch": 2.448336252189142,
+      "step": 700
+    },
+    {
+      "loss": 0.19288480281829834,
+      "grad_norm": 0.21824070811271667,
+      "learning_rate": 1.6045575241761722e-05,
+      "epoch": 2.4833625218914186,
+      "step": 710
+    },
+    {
+      "loss": 0.18596627712249755,
+      "grad_norm": 0.22525468468666077,
+      "learning_rate": 1.4014226179297652e-05,
+      "epoch": 2.5183887915936953,
+      "step": 720
+    },
+    {
+      "loss": 0.15822768211364746,
+      "grad_norm": 0.17849552631378174,
+      "learning_rate": 1.2110626071573539e-05,
+      "epoch": 2.553415061295972,
+      "step": 730
+    },
+    {
+      "loss": 0.18780941963195802,
+      "grad_norm": 0.19623057544231415,
+      "learning_rate": 1.0337603094846949e-05,
+      "epoch": 2.588441330998249,
+      "step": 740
+    },
+    {
+      "loss": 0.18218533992767333,
+      "grad_norm": 0.23136189579963684,
+      "learning_rate": 8.697791427097978e-06,
+      "epoch": 2.6234676007005255,
+      "step": 750
+    },
+    {
+      "loss": 0.19075359106063844,
+      "grad_norm": 0.2218305617570877,
+      "learning_rate": 7.19362733443466e-06,
+      "epoch": 2.6584938704028023,
+      "step": 760
+    },
+    {
+      "loss": 0.15408698320388795,
+      "grad_norm": 0.20246197283267975,
+      "learning_rate": 5.827345551535235e-06,
+      "epoch": 2.693520140105079,
+      "step": 770
+    },
+    {
+      "loss": 0.1757601261138916,
+      "grad_norm": 0.17478282749652863,
+      "learning_rate": 4.600975961505816e-06,
+      "epoch": 2.7285464098073557,
+      "step": 780
+    },
+    {
+      "loss": 0.15209139585494996,
+      "grad_norm": 0.21428735554218292,
+      "learning_rate": 3.5163405800856417e-06,
+      "epoch": 2.7635726795096325,
+      "step": 790
+    },
+    {
+      "loss": 0.1972719430923462,
+      "grad_norm": 0.2268686145544052,
+      "learning_rate": 2.5750508486805826e-06,
+      "epoch": 2.7985989492119088,
+      "step": 800
+    },
+    {
+      "loss": 0.191356885433197,
+      "grad_norm": 0.17934907972812653,
+      "learning_rate": 1.7785052402467085e-06,
+      "epoch": 2.8336252189141855,
+      "step": 810
+    },
+    {
+      "loss": 0.17432138919830323,
+      "grad_norm": 0.2828114926815033,
+      "learning_rate": 1.1278871815807669e-06,
+      "epoch": 2.8686514886164622,
+      "step": 820
+    },
+    {
+      "loss": 0.16472234725952148,
+      "grad_norm": 0.19979816675186157,
+      "learning_rate": 6.241632951045629e-07,
+      "epoch": 2.903677758318739,
+      "step": 830
+    },
+    {
+      "loss": 0.1931670069694519,
+      "grad_norm": 0.2438308447599411,
+      "learning_rate": 2.680819627551845e-07,
+      "epoch": 2.9387040280210157,
+      "step": 840
+    },
+    {
+      "loss": 0.15167735815048217,
+      "grad_norm": 0.17090481519699097,
+      "learning_rate": 6.017221411496188e-08,
+      "epoch": 2.9737302977232924,
+      "step": 850
+    },
+    {
+      "eval_loss": 0.20883333683013916,
+      "eval_runtime": 18.096,
+      "eval_samples_per_second": 15.749,
+      "eval_steps_per_second": 15.749,
+      "epoch": 3.0,
+      "step": 858
+    },
+    {
+      "train_runtime": 1096.7339,
+      "train_samples_per_second": 6.245,
+      "train_steps_per_second": 0.782,
+      "total_flos": 3.087591839880192e+16,
+      "train_loss": 0.250765957059838,
+      "epoch": 3.0,
+      "step": 858
+    }
+  ],
+  "seed": 42,
+  "num_train_epochs": 3.0,
+  "checkpoint_policy": "final_epoch",
+  "best_checkpoint_selection": false,
+  "final_epoch": 3.0,
+  "final_epoch_matches_policy": true,
+  "final_eval_epoch": 3.0,
+  "final_eval_loss": 0.20883333683013916,
+  "loss": {
+    "assistant_only_loss": false,
+    "completion_only_loss": false,
+    "full_sequence_loss": true,
+    "prediction_loss_only": true,
+    "dataset_text_field": "text"
+  },
+  "precision": {
+    "dtype": "bfloat16",
+    "bf16": true,
+    "fp16": false,
+    "load_in_4bit": false,
+    "base_check": {
+      "base_parameter_dtypes": {
+        "torch.bfloat16": 310
+      },
+      "adapter_parameter_count": 0,
+      "quantized_modules": [],
+      "offload": [],
+      "checked": "bf16+cuda, no quantization/offload"
+    },
+    "peft_check": {
+      "base_parameter_dtypes": {
+        "torch.bfloat16": 310
+      },
+      "adapter_parameter_count": 392,
+      "quantized_modules": [],
+      "offload": [],
+      "checked": "bf16+cuda, no quantization/offload"
+    }
+  },
+  "lora": {
+    "r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.0,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "bias": "none",
+    "use_gradient_checkpointing": "unsloth",
+    "random_state": 42
+  },
+  "lora_applied": {
+    "r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.0,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "bias": "none",
+    "use_gradient_checkpointing": "unsloth",
+    "random_state": 42
+  },
+  "trainable_parameters": {
+    "status": "available",
+    "count": 392,
+    "numel": 17432576,
+    "names": [
+      "base_model.model.model.layers.0.mlp.down_proj.lora_A.default.weight",
+      "base_model.model.model.layers.0.mlp.down_proj.lora_B.default.weight",
+      "base_model.model.model.layers.0.mlp.gate_proj.lora_A.default.weight",
+      "base_model.model.model.layers.0.mlp.gate_proj.lora_B.default.weight",
+      "base_model.model.model.layers.0.mlp.up_proj.lora_A.default.weight",
+      "base_model.model.model.layers.0.mlp.up_proj.lora_B.default.weight",
+      "base_model.model.model.layers.0.self_attn.k_proj.lora_A.default.weight",
+      "base_model.model.model.layers.0.self_attn.k_proj.lora_B.default.weight",
+      "base_model.model.model.layers.0.self_attn.o_proj.lora_A.default.weight",
+      "base_model.model.model.layers.0.self_attn.o_proj.lora_B.default.weight",
+      "base_model.model.model.layers.0.self_attn.q_proj.lora_A.default.weight",
+      "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight",
+      "base_model.model.model.layers.0.self_attn.v_proj.lora_A.default.weight",
+      "base_model.model.model.layers.0.self_attn.v_proj.lora_B.default.weight",
+      "base_model.model.model.layers.1.mlp.down_proj.lora_A.default.weight",
+      "base_model.model.model.layers.1.mlp.down_proj.lora_B.default.weight",
+      "base_model.model.model.layers.1.mlp.gate_proj.lora_A.default.weight",
+      "base_model.model.model.layers.1.mlp.gate_proj.lora_B.default.weight",
+      "base_model.model.model.layers.1.mlp.up_proj.lora_A.default.weight",
+      "base_model.model.model.layers.1.mlp.up_proj.lora_B.default.weight",
+      "base_model.model.model.layers.1.self_attn.k_proj.lora_A.default.weight",
+      "base_model.model.model.layers.1.self_attn.k_proj.lora_B.default.weight",
+      "base_model.model.model.layers.1.self_attn.o_proj.lora_A.default.weight",
+      "base_model.model.model.layers.1.self_attn.o_proj.lora_B.default.weight",
+      "base_model.model.model.layers.1.self_attn.q_proj.lora_A.default.weight",
+      "base_model.model.model.layers.1.self_attn.q_proj.lora_B.default.weight",
+      "base_model.model.model.layers.1.self_attn.v_proj.lora_A.default.weight",
+      "base_model.model.model.layers.1.self_attn.v_proj.lora_B.default.weight",
+      "base_model.model.model.layers.10.mlp.down_proj.lora_A.default.weight",
+      "base_model.model.model.layers.10.mlp.down_proj.lora_B.default.weight",
+      "base_model.model.model.layers.10.mlp.gate_proj.lora_A.default.weight",
+      "base_model.model.model.layers.10.mlp.gate_proj.lora_B.default.weight",
+      "base_model.model.model.layers.10.mlp.up_proj.lora_A.default.weight",
+      "base_model.model.model.layers.10.mlp.up_proj.lora_B.default.weight",
+      "base_model.model.model.layers.10.self_attn.k_proj.lora_A.default.weight",
+      "base_model.model.model.layers.10.self_attn.k_proj.lora_B.default.weight",
+      "base_model.model.model.layers.10.self_attn.o_proj.lora_A.default.weight",
+      "base_model.model.model.layers.10.self_attn.o_proj.lora_B.default.weight",
+      "base_model.model.model.layers.10.self_attn.q_proj.lora_A.default.weight",
+      "base_model.model.model.layers.10.self_attn.q_proj.lora_B.default.weight",
+      "base_model.model.model.layers.10.self_attn.v_proj.lora_A.default.weight",
+      "base_model.model.model.layers.10.self_attn.v_proj.lora_B.default.weight",
+      "base_model.model.model.layers.11.mlp.down_proj.lora_A.default.weight",
+      "base_model.model.model.layers.11.mlp.down_proj.lora_B.default.weight",
+      "base_model.model.model.layers.11.mlp.gate_proj.lora_A.default.weight",
+      "base_model.model.model.layers.11.mlp.gate_proj.lora_B.default.weight",
+      "base_model.model.model.layers.11.mlp.up_proj.lora_A.default.weight",
+      "base_model.model.model.layers.11.mlp.up_proj.lora_B.default.weight",
+      "base_model.model.model.layers.11.self_attn.k_proj.lora_A.default.weight",
+      "base_model.model.model.layers.11.self_attn.k_proj.lora_B.default.weight",
+      "base_model.model.model.layers.11.self_attn.o_proj.lora_A.default.weight",
+      "base_model.model.model.layers.11.self_attn.o_proj.lora_B.default.weight",
+      "base_model.model.model.layers.11.self_attn.q_proj.lora_A.default.weight",
+      "base_model.model.model.layers.11.self_attn.q_proj.lora_B.default.weight",
+      "base_model.model.model.layers.11.self_attn.v_proj.lora_A.default.weight",
+      "base_model.model.model.layers.11.self_attn.v_proj.lora_B.default.weight",
+      "base_model.model.model.layers.12.mlp.down_proj.lora_A.default.weight",
+      "base_model.model.model.layers.12.mlp.down_proj.lora_B.default.weight",
+      "base_model.model.model.layers.12.mlp.gate_proj.lora_A.default.weight",
+      "base_model.model.model.layers.12.mlp.gate_proj.lora_B.default.weight",
+      "base_model.model.model.layers.12.mlp.up_proj.lora_A.default.weight",
+      "base_model.model.model.layers.12.mlp.up_proj.lora_B.default.weight",
+      "base_model.model.model.layers.12.self_attn.k_proj.lora_A.default.weight",
+      "base_model.model.model.layers.12.self_attn.k_proj.lora_B.default.weight",
+      "base_model.model.model.layers.12.self_attn.o_proj.lora_A.default.weight",
+      "base_model.model.model.layers.12.self_attn.o_proj.lora_B.default.weight",
+      "base_model.model.model.layers.12.self_attn.q_proj.lora_A.default.weight",
+      "base_model.model.model.layers.12.self_attn.q_proj.lora_B.default.weight",
+      "base_model.model.model.layers.12.self_attn.v_proj.lora_A.default.weight",
+      "base_model.model.model.layers.12.self_attn.v_proj.lora_B.default.weight",
+      "base_model.model.model.layers.13.mlp.down_proj.lora_A.default.weight",
+      "base_model.model.model.layers.13.mlp.down_proj.lora_B.default.weight",
+      "base_model.model.model.layers.13.mlp.gate_proj.lora_A.default.weight",
+      "base_model.model.model.layers.13.mlp.gate_proj.lora_B.default.weight",
+      "base_model.model.model.layers.13.mlp.up_proj.lora_A.default.weight",
+      "base_model.model.model.layers.13.mlp.up_proj.lora_B.default.weight",
+      "base_model.model.model.layers.13.self_attn.k_proj.lora_A.default.weight",
+      "base_model.model.model.layers.13.self_attn.k_proj.lora_B.default.weight",
+      "base_model.model.model.layers.13.self_attn.o_proj.lora_A.default.weight",
+      "base_model.model.model.layers.13.self_attn.o_proj.lora_B.default.weight",
+      "base_model.model.model.layers.13.self_attn.q_proj.lora_A.default.weight",
+      "base_model.model.model.layers.13.self_attn.q_proj.lora_B.default.weight",
+      "base_model.model.model.layers.13.self_attn.v_proj.lora_A.default.weight",
+      "base_model.model.model.layers.13.self_attn.v_proj.lora_B.default.weight",
+      "base_model.model.model.layers.14.mlp.down_proj.lora_A.default.weight",
+      "base_model.model.model.layers.14.mlp.down_proj.lora_B.default.weight",
+      "base_model.model.model.layers.14.mlp.gate_proj.lora_A.default.weight",
+      "base_model.model.model.layers.14.mlp.gate_proj.lora_B.default.weight",
+      "base_model.model.model.layers.14.mlp.up_proj.lora_A.default.weight",
+      "base_model.model.model.layers.14.mlp.up_proj.lora_B.default.weight",
+      "base_model.model.model.layers.14.self_attn.k_proj.lora_A.default.weight",
+      "base_model.model.model.layers.14.self_attn.k_proj.lora_B.default.weight",
+      "base_model.model.model.layers.14.self_attn.o_proj.lora_A.default.weight",
+      "base_model.model.model.layers.14.self_attn.o_proj.lora_B.default.weight",
+      "base_model.model.model.layers.14.self_attn.q_proj.lora_A.default.weight",
+      "base_model.model.model.layers.14.self_attn.q_proj.lora_B.default.weight",
+      "base_model.model.model.layers.14.self_attn.v_proj.lora_A.default.weight",
+      "base_model.model.model.layers.14.self_attn.v_proj.lora_B.default.weight",
+      "base_model.model.model.layers.15.mlp.down_proj.lora_A.default.weight",
+      "base_model.model.model.layers.15.mlp.down_proj.lora_B.default.weight",
+      "base_model.model.model.layers.15.mlp.gate_proj.lora_A.default.weight",
+      "base_model.model.model.layers.15.mlp.gate_proj.lora_B.default.weight",
+      "base_model.model.model.layers.15.mlp.up_proj.lora_A.default.weight",
+      "base_model.model.model.layers.15.mlp.up_proj.lora_B.default.weight",
+      "base_model.model.model.layers.15.self_attn.k_proj.lora_A.default.weight",
+      "base_model.model.model.layers.15.self_attn.k_proj.lora_B.default.weight",
+      "base_model.model.model.layers.15.self_attn.o_proj.lora_A.default.weight",
+      "base_model.model.model.layers.15.self_attn.o_proj.lora_B.default.weight",
+      "base_model.model.model.layers.15.self_attn.q_proj.lora_A.default.weight",
+      "base_model.model.model.layers.15.self_attn.q_proj.lora_B.default.weight",
+      "base_model.model.model.layers.15.self_attn.v_proj.lora_A.default.weight",
+      "base_model.model.model.layers.15.self_attn.v_proj.lora_B.default.weight",
+      "base_model.model.model.layers.16.mlp.down_proj.lora_A.default.weight",
+      "base_model.model.model.layers.16.mlp.down_proj.lora_B.default.weight",
+      "base_model.model.model.layers.16.mlp.gate_proj.lora_A.default.weight",
+      "base_model.model.model.layers.16.mlp.gate_proj.lora_B.default.weight",
+      "base_model.model.model.layers.16.mlp.up_proj.lora_A.default.weight",
+      "base_model.model.model.layers.16.mlp.up_proj.lora_B.default.weight",
+      "base_model.model.model.layers.16.self_attn.k_proj.lora_A.default.weight",
+      "base_model.model.model.layers.16.self_attn.k_proj.lora_B.default.weight",
+      "base_model.model.model.layers.16.self_attn.o_proj.lora_A.default.weight",
+      "base_model.model.model.layers.16.self_attn.o_proj.lora_B.default.weight",
+      "base_model.model.model.layers.16.self_attn.q_proj.lora_A.default.weight",
+      "base_model.model.model.layers.16.self_attn.q_proj.lora_B.default.weight",
+      "base_model.model.model.layers.16.self_attn.v_proj.lora_A.default.weight",
+      "base_model.model.model.layers.16.self_attn.v_proj.lora_B.default.weight",
+      "base_model.model.model.layers.17.mlp.down_proj.lora_A.default.weight",
+      "base_model.model.model.layers.17.mlp.down_proj.lora_B.default.weight",
+      "base_model.model.model.layers.17.mlp.gate_proj.lora_A.default.weight",
+      "base_model.model.model.layers.17.mlp.gate_proj.lora_B.default.weight",
+      "base_model.model.model.layers.17.mlp.up_proj.lora_A.default.weight",
+      "base_model.model.model.layers.17.mlp.up_proj.lora_B.default.weight",
+      "base_model.model.model.layers.17.self_attn.k_proj.lora_A.default.weight",
+      "base_model.model.model.layers.17.self_attn.k_proj.lora_B.default.weight",
+      "base_model.model.model.layers.17.self_attn.o_proj.lora_A.default.weight",
+      "base_model.model.model.layers.17.self_attn.o_proj.lora_B.default.weight",
+      "base_model.model.model.layers.17.self_attn.q_proj.lora_A.default.weight",
+      "base_model.model.model.layers.17.self_attn.q_proj.lora_B.default.weight",
+      "base_model.model.model.layers.17.self_attn.v_proj.lora_A.default.weight",
+      "base_model.model.model.layers.17.self_attn.v_proj.lora_B.default.weight",
+      "base_model.model.model.layers.18.mlp.down_proj.lora_A.default.weight",
+      "base_model.model.model.layers.18.mlp.down_proj.lora_B.default.weight",
+      "base_model.model.model.layers.18.mlp.gate_proj.lora_A.default.weight",
+      "base_model.model.model.layers.18.mlp.gate_proj.lora_B.default.weight",
+      "base_model.model.model.layers.18.mlp.up_proj.lora_A.default.weight",
+      "base_model.model.model.layers.18.mlp.up_proj.lora_B.default.weight",
+      "base_model.model.model.layers.18.self_attn.k_proj.lora_A.default.weight",
+      "base_model.model.model.layers.18.self_attn.k_proj.lora_B.default.weight",
+      "base_model.model.model.layers.18.self_attn.o_proj.lora_A.default.weight",
+      "base_model.model.model.layers.18.self_attn.o_proj.lora_B.default.weight",
+      "base_model.model.model.layers.18.self_attn.q_proj.lora_A.default.weight",
+      "base_model.model.model.layers.18.self_attn.q_proj.lora_B.default.weight",
+      "base_model.model.model.layers.18.self_attn.v_proj.lora_A.default.weight",
+      "base_model.model.model.layers.18.self_attn.v_proj.lora_B.default.weight",
+      "base_model.model.model.layers.19.mlp.down_proj.lora_A.default.weight",
+      "base_model.model.model.layers.19.mlp.down_proj.lora_B.default.weight",
+      "base_model.model.model.layers.19.mlp.gate_proj.lora_A.default.weight",
+      "base_model.model.model.layers.19.mlp.gate_proj.lora_B.default.weight",
+      "base_model.model.model.layers.19.mlp.up_proj.lora_A.default.weight",
+      "base_model.model.model.layers.19.mlp.up_proj.lora_B.default.weight",
+      "base_model.model.model.layers.19.self_attn.k_proj.lora_A.default.weight",
+      "base_model.model.model.layers.19.self_attn.k_proj.lora_B.default.weight",
+      "base_model.model.model.layers.19.self_attn.o_proj.lora_A.default.weight",
+      "base_model.model.model.layers.19.self_attn.o_proj.lora_B.default.weight",
+      "base_model.model.model.layers.19.self_attn.q_proj.lora_A.default.weight",
+      "base_model.model.model.layers.19.self_attn.q_proj.lora_B.default.weight",
+      "base_model.model.model.layers.19.self_attn.v_proj.lora_A.default.weight",
+      "base_model.model.model.layers.19.self_attn.v_proj.lora_B.default.weight",
+      "base_model.model.model.layers.2.mlp.down_proj.lora_A.default.weight",
+      "base_model.model.model.layers.2.mlp.down_proj.lora_B.default.weight",
+      "base_model.model.model.layers.2.mlp.gate_proj.lora_A.default.weight",
+      "base_model.model.model.layers.2.mlp.gate_proj.lora_B.default.weight",
+      "base_model.model.model.layers.2.mlp.up_proj.lora_A.default.weight",
+      "base_model.model.model.layers.2.mlp.up_proj.lora_B.default.weight",
+      "base_model.model.model.layers.2.self_attn.k_proj.lora_A.default.weight",
+      "base_model.model.model.layers.2.self_attn.k_proj.lora_B.default.weight",
+      "base_model.model.model.layers.2.self_attn.o_proj.lora_A.default.weight",
+      "base_model.model.model.layers.2.self_attn.o_proj.lora_B.default.weight",
+      "base_model.model.model.layers.2.self_attn.q_proj.lora_A.default.weight",
+      "base_model.model.model.layers.2.self_attn.q_proj.lora_B.default.weight",
+      "base_model.model.model.layers.2.self_attn.v_proj.lora_A.default.weight",
+      "base_model.model.model.layers.2.self_attn.v_proj.lora_B.default.weight",
+      "base_model.model.model.layers.20.mlp.down_proj.lora_A.default.weight",
+      "base_model.model.model.layers.20.mlp.down_proj.lora_B.default.weight",
+      "base_model.model.model.layers.20.mlp.gate_proj.lora_A.default.weight",
+      "base_model.model.model.layers.20.mlp.gate_proj.lora_B.default.weight",
+      "base_model.model.model.layers.20.mlp.up_proj.lora_A.default.weight",
+      "base_model.model.model.layers.20.mlp.up_proj.lora_B.default.weight",
+      "base_model.model.model.layers.20.self_attn.k_proj.lora_A.default.weight",
+      "base_model.model.model.layers.20.self_attn.k_proj.lora_B.default.weight",
+      "base_model.model.model.layers.20.self_attn.o_proj.lora_A.default.weight",
+      "base_model.model.model.layers.20.self_attn.o_proj.lora_B.default.weight",
+      "base_model.model.model.layers.20.self_attn.q_proj.lora_A.default.weight",
+      "base_model.model.model.layers.20.self_attn.q_proj.lora_B.default.weight",
+      "base_model.model.model.layers.20.self_attn.v_proj.lora_A.default.weight",
+      "base_model.model.model.layers.20.self_attn.v_proj.lora_B.default.weight",
+      "base_model.model.model.layers.21.mlp.down_proj.lora_A.default.weight",
+      "base_model.model.model.layers.21.mlp.down_proj.lora_B.default.weight",
+      "base_model.model.model.layers.21.mlp.gate_proj.lora_A.default.weight",
+      "base_model.model.model.layers.21.mlp.gate_proj.lora_B.default.weight"
+    ],
+    "names_truncated": true,
+    "vision_like_count": 0,
+    "vision_like_numel": 0,
+    "vision_like_names": []
+  },
+  "vision_freeze": {
+    "applicable": false,
+    "asserted_no_vision_trainables": false
+  },
+  "sequence_lengths": {
+    "train": {
+      "rows": 2283,
+      "user_tokens": {
+        "min": 2,
+        "p50": 29,
+        "p95": 101,
+        "max": 265
+      },
+      "target_tokens": {
+        "min": 71,
+        "p50": 76,
+        "p95": 77,
+        "max": 77
+      },
+      "full_tokens": {
+        "min": 492,
+        "p50": 518,
+        "p95": 589,
+        "max": 751
+      },
+      "truncated_reviews": 0,
+      "full_length_violations": 0
+    },
+    "val": {
+      "rows": 285,
+      "user_tokens": {
+        "min": 4,
+        "p50": 30,
+        "p95": 101,
+        "max": 265
+      },
+      "target_tokens": {
+        "min": 72,
+        "p50": 76,
+        "p95": 77,
+        "max": 77
+      },
+      "full_tokens": {
+        "min": 494,
+        "p50": 518,
+        "p95": 588,
+        "max": 754
+      },
+      "truncated_reviews": 0,
+      "full_length_violations": 0
+    }
+  },
+  "train_peak_allocated_gib": 4.17736291885376,
+  "train_peak_reserved_gib": 4.23046875,
+  "setup_peak_allocated_gib": 4.101689338684082,
+  "setup_peak_reserved_gib": 4.103515625,
+  "wall_train_seconds": 1097.7239023377188,
+  "cuda": {
+    "probed": true,
+    "available": true,
+    "cuda_version": "12.8",
+    "torch_version": "2.11.0+cu128",
+    "device_count": 1,
+    "devices": [
+      "NVIDIA GeForce RTX 5060 Ti"
+    ]
+  },
+  "library_versions": {
+    "python": "3.11.16",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.5.0",
+    "peft": "0.20.0",
+    "datasets": "4.3.0",
+    "trl": "0.24.0",
+    "unsloth": "2026.9.4",
+    "unsloth_zoo": "2026.9.3",
+    "accelerate": "1.15.0",
+    "bitsandbytes": "0.50.2",
+    "PyYAML": "6.0.3",
+    "tqdm": "4.70.1"
+  },
+  "resolved_revision_source": "model_config"
+}
