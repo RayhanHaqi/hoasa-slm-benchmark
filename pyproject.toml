@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hoasa-slm-benchmark"
+version = "0.1.0"
+description = "Indonesian hotel-review ABSA (IndoNLU HoASA) SLM benchmark: prepare, metadata preflight, majority baseline, BF16 LoRA SFT, shared evaluation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "PyYAML==6.0.3",
+]
+
+[project.scripts]
+hoasa = "hoasa_benchmark.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

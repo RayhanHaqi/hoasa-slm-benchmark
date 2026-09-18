@@ -1,0 +1,73 @@
+## Shared recipe for every configuration in this benchmark:
+## BF16 base (load_in_4bit false, fp16 false), LoRA r16/alpha32/dropout0,
+## 3 epochs lr 2e-4 cosine warmup 0.05 wd 0.01 seed 42, micro-batch 2 with
+## gradient accumulation 4 (effective 8), eval batch 1, adamw_8bit,
+## validation loss + checkpoint every epoch, final-epoch (3) adapter saved.
+name: 04-qwen3.5-2b
+
+paths:
+  data_dir: data
+  runs_dir: runs
+
+model:
+  base_model: Qwen/Qwen3.5-2B
+  revision: 15852e8c16360a2fea060d615a32b45270f8a8fc
+  kind: vision
+  trust_remote_code: false
+  use_exact_model_name: true
+  load_in_4bit: false
+  max_seq_length: 2048
+  chat_template_kwargs:
+    enable_thinking: false
+
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.0
+  bias: none
+  target_modules: all-linear
+  gradient_checkpointing: unsloth
+  random_state: 42
+  finetune_vision_layers: false
+  finetune_language_layers: true
+  finetune_attention_modules: true
+  finetune_mlp_modules: true
+
+training:
+  adapter_subdir: adapter
+  trainer_subdir: trainer
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 1
+  gradient_accumulation_steps: 4
+  num_train_epochs: 3
+  learning_rate: 0.0002
+  lr_scheduler_type: cosine
+  warmup_ratio: 0.05
+  weight_decay: 0.01
+  seed: 42
+  optim: adamw_8bit
+  bf16: true
+  fp16: false
+  logging_steps: 10
+  eval_strategy: epoch
+  save_strategy: epoch
+  save_total_limit: 2
+  report_to: none
+
+evaluation:
+  split: test
+  max_user_tokens: 1536
+  max_new_tokens: 256
+  do_sample: false
+
+benchmark:
+  display_name: Qwen3.5-2B
+  official_checkpoint: Qwen/Qwen3.5-2B
+  pinned_revision: 15852e8c16360a2fea060d615a32b45270f8a8fc
+  method: LoRA r16 alpha32, full BF16 base weights, no quantization
+  compatibility_notes: >-
+    FastVisionModel; text-only reviews; vision tower frozen via
+    target_modules=None at the get_peft call (Unsloth would otherwise force
+    every finetune_* flag true for the literal "all-linear"); language,
+    attention and MLP LoRA only; thinking disabled. No resume-from-checkpoint
+    field (unlike the historical reference config).

@@ -1,0 +1,15 @@
+# Local model cache (metadata preflight only; must never contain weight files)
+.cache/
+unsloth_compiled_cache/
+
+# Prepared/raw data and every run artifact (adapters, checkpoints, metrics)
+data/
+runs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
