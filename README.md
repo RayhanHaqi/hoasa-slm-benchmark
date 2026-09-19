@@ -15,6 +15,7 @@ Fine-tuning four small language models to turn Indonesian hotel reviews from the
 - All four improved mean aspect macro-F1 over their base checkpoint.
 - Best fine-tuned score: Qwen3.5-0.8B at 0.692 (base 0.253), 79.4% whole-review exact, 100% schema-valid.
 - Single-run, task-specific results on a frozen 286-row labeled test split. These are not leaderboard scores.
+- Published [Qwen3.5-0.8B HoASA LoRA reproduction](https://huggingface.co/Tilakoid/qwen3.5-0.8b-hoasa-lora) is a C2 valid-different reproduction: fresh macro-F1 0.693525, whole-review exact 79.4%, and output validity 100%. It is not the historical adapter.
 
 ## Base to LoRA mean aspect macro-F1
 
